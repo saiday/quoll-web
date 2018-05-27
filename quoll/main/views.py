@@ -1,9 +1,10 @@
+import json
 from urllib.parse import urlparse
 from uuid import uuid4
 
 from django.core.exceptions import ValidationError
 from django.core.validators import URLValidator
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from scrapyd_api import ScrapydAPI
@@ -11,6 +12,7 @@ from scrapyd_api import ScrapydAPI
 # connect scrapyd service
 
 scrapyd = ScrapydAPI('http://localhost:6800')
+
 
 def is_valid_url(url):
     validate = URLValidator()
@@ -21,21 +23,30 @@ def is_valid_url(url):
 
     return True
 
+
+def valid_site(site):
+    valid_sites = ['indievox']
+    if site in valid_sites:
+        return True
+    return False
+
+
 @csrf_exempt
 @require_http_methods(['POST', 'GET']) # only GET and POST
 def crawl(request):
     if request.method == 'POST':
-        url = request.POST.get('url', None)
+        site = request.POST.get('site', None)
 
-        if not url:
-            return JsonResponse({'error': 'Missing args'})
-        if not is_valid_url(url):
-            return JsonResponse({'error': 'URL is invalid'})
-
-        domain = urlparse(url).netloc  # parse the url and extract the domain
+        if not site:
+            return HttpResponseBadRequest(json.dumps({'error': 'Missing site argument'}),
+                                          content_type='application/json')
+        if not valid_site(site):
+            return HttpResponseBadRequest(json.dumps({'error': 'Unsupported site'}),
+                                          content_type='application/json')
         unique_id = str(uuid4())
+        settings = {'unique_id': unique_id}
 
-        task = scrapyd.schedule('quoll-scrapy', 'indievox')
+        task = scrapyd.schedule('default', 'indievox', settings=settings)
 
         return JsonResponse({'task_id': task, 'unique_id': unique_id, 'status': 'started', })
 

@@ -1,0 +1,137 @@
+2018-05-27 19:51:06 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: scrapy_app)
+2018-05-27 19:51:06 [scrapy.utils.log] INFO: Versions: lxml 4.2.1.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.6.5 (default, Mar 30 2018, 06:41:53) - [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Darwin-17.5.0-x86_64-i386-64bit
+2018-05-27 19:51:06 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_app', 'LOG_FILE': 'logs/default/indievox/493925f461e711e8b40df200c0f96a01.log', 'NEWSPIDER_MODULE': 'scrapy_app.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['scrapy_app.spiders']}
+2018-05-27 19:51:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-05-27 19:51:06 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-05-27 19:51:06 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-05-27 19:51:06 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.StoreEventPipeline']
+2018-05-27 19:51:06 [scrapy.core.engine] INFO: Spider opened
+2018-05-27 19:51:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-05-27 19:51:06 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6026
+2018-05-27 19:51:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.indievox.com/robots.txt> (referer: None)
+2018-05-27 19:51:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.indievox.com/event/get-more-event-date-list?style=poster&content=event_ticket&content_container_id=event-ticket-block&start_date=2018-05-27&end_date=2030-12-31&key_word=&load_more=1&pagenation_type=full-page-more&pagenation_expand_col=&offset=0&length=7> (referer: None)
+2018-05-27 19:51:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.indievox.com/legacymini/event-post/20736> (referer: https://www.indievox.com/event/get-more-event-date-list?style=poster&content=event_ticket&content_container_id=event-ticket-block&start_date=2018-05-27&end_date=2030-12-31&key_word=&load_more=1&pagenation_type=full-page-more&pagenation_expand_col=&offset=0&length=7)
+2018-05-27 19:51:08 [scrapy.core.scraper] ERROR: Error processing {'address': '台北市萬華區武昌街二段77號5樓',
+ 'artists': ['葉柔'],
+ 'body': '<div>\n'
+         '                        <p>\xa0</p>\n'
+         '<p>流 行 × 電 音 × 拒 絕 長 大<br> 「每首歌都其來有自，每個葉柔都是你的故事。」<br><br> '
+         '由葉柔擔綱創作及超乎想像的現場演出、Sugar.C 以前衛及迷幻的合成音效為歌曲定向、吉他手 YC '
+         '極富張力的吉他聲響，三人在各種不同的歌曲類型中激發出天馬行空的火花。<br><br><br> 可愛又浪漫的搞怪嗓音<br> '
+         '華麗又優雅的深度歌唱<br> 用暢快節奏唱出女孩們的心聲<br> 用文字音符訴說戀愛中的煩惱<br><br> '
+         '快來與葉柔一起夢遊吧！<br> 在絢爛迷離的遊樂園裡<br> 快來與葉柔一起跳舞吧！<br> '
+         '每個為愛而迷失的靈魂<br><br><br> 用你的大人感傾聽<br> 用你的幼稚感歌唱<br> 請跟著我 《 我是葉柔 》 '
+         '發片演唱會</p>\n'
+         '<p>\xa0</p>\n'
+         '<hr><p>＊ 本場次購票方式為：「網站信用卡付款，ibon取票」及「ibon購票、取票」兩種，相關注意事項請詳閱 iNDIEVOX '
+         '購票說明 <a '
+         'href="http://www.indievox.com/h/buy-ticket/web">http://www.indievox.com/h/buy-ticket/web</a>。</p>\n'
+         '<p>＊ 本活動為：全區座位，自由入座 。</p>\n'
+         '<p>＊ 開演時間為 20：00，將於 19：00 開放入場。</p>\n'
+         '<p>＊ 早鳥票開賣時間：2018/04/02（一）12：00〈開賣至 2018/04/15（日）23：59 截止〉</p>\n'
+         '<p>＊ '
+         '一般預售票開賣時間：2018/04/16（一）00：00。〈開演前一日即停止預售，開演當天請至現場購買現場票種，現場售票僅接受現金付款〉</p>\n'
+         '<p>＊ 身障票種將於 2018/04/02（一）12：00 開始受理傳真訂單，於此時間前傳真進件的訂單恕皆不受理。訂購單請至下載頁面 '
+         '<a '
+         'href="https://www.indievox.com/h/buy-ticket/accessible-tickets">https://www.indievox.com/h/buy-ticket/accessible-tickets</a></p>\n'
+         '<p>＊ 預售一經完售即不開放現場售票。</p>\n'
+         '<p>＊ 一人一票入場，票券遺失，須重新購票，恕不補發。</p>\n'
+         '<p>＊ 購票前請確認您欲購買的場次本活動，本活動恕不提供換票，如需換票等同於退票。</p>\n'
+         '<p>＊ 如需辦理退票請先閱讀 iNDIEVOX 退票須知 <a '
+         'href="http://www.indievox.com/h/buy-ticket/refund">http://www.indievox.com/h/buy-ticket/refund</a> '
+         '並請留意受理退票的期限。</p>\n'
+         '<p>＊ 活動開演前 10 日起（不含活動當日）即不再受理退票。本活動的退票辦理截止期限為 '
+         '2018/05/17（四），退票日以郵寄辦理郵戳為憑，逾期皆不再受理。</p>\n'
+         '<p>＊若遇購票有疑問，可於客服時間內洽詢 iNDIEVOX 客服專線 02-2748-9758，專人客服時間為平日週一至週五 '
+         '13:00~19:00；若遇周末及國定假日，請來信至 '
+         'support@indievox.com，專人將盡快於客服時間內為您確認回覆。</p>                    '
+         '</div>',
+ 'date': '2018/05/27',
+ 'image': 'https://d1ekh1oj0tf067.cloudfront.net/indievox_user/180000/170146/event/event20736240.jpg?1526356424',
+ 'price': '早鳥票：350 元 (販售至4/15午夜截止) / 預售票：450 元 / 現場票：550 元 / 身障票：225 '
+          '元（僅限iNDIEVOX傳真訂購）',
+ 'time': '20:00',
+ 'title': '【Legacy mini @ amba】 葉柔《我是葉柔》發片演唱會',
+ 'url': 'https://www.indievox.com/legacymini/event-post/20736',
+ 'venue': 'Legacy mini @amba'}
+Traceback (most recent call last):
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/saiday/projects/quoll-web/quoll/scrapy_app/scrapy_app/pipelines.py", line 74, in process_item
+    event.save()
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1282, in execute_sql
+    for sql, params in self.as_sql():
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1235, in as_sql
+    for obj in self.query.objs
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1235, in <listcomp>
+    for obj in self.query.objs
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1234, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1174, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 767, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1276, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1271, in get_prep_value
+    return self.to_python(value)
+  File "/Users/saiday/projects/quoll-web/quoll-web-venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1246, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ["'2018/05/27' value has an invalid date format. It must be in YYYY-MM-DD format."]
+2018-05-27 19:51:08 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-05-27 19:51:08 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1290,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 20166,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/200': 3,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 5, 27, 19, 51, 8, 578818),
+ 'log_count/DEBUG': 4,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 64278528,
+ 'memusage/startup': 64278528,
+ 'request_depth_max': 1,
+ 'response_received_count': 3,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2018, 5, 27, 19, 51, 6, 961617)}
+2018-05-27 19:51:08 [scrapy.core.engine] INFO: Spider closed (finished)

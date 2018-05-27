@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-import scrapy
-from django.utils.datetime_safe import datetime
-from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider, Rule
+import datetime
+import logging
 
-from quoll.scrapy_app.scrapy_app.items import Event
+from scrapy.spiders import CrawlSpider
+
+from scrapy_app.items import Event
 
 
 def compose_list_url(start_date, offset):

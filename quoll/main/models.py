@@ -23,13 +23,13 @@ class Event(models.Model):
     body = models.TextField()
     date = models.DateField()
     time = models.TimeField()
-    price = models.CharField(max_length=50, default='')
+    price = models.CharField(max_length=300, default='')
     created_at = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
     # relationship
     venue = models.ForeignKey(Venue, on_delete=models.CASCADE)
-    artists = models.ManyToManyField(Artist)
+    artists = models.ManyToManyField(Artist, blank=True, null=True)
 
     def __str__(self):
         return self.title
